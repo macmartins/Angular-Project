@@ -1,9 +1,9 @@
-<app-header-component></app-header-component>
+<app-header-component (handleMenuClick)="handleMenuClick($event)"></app-header-component>
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <app-recipes></app-recipes>
-      <app-shopping-list></app-shopping-list>
+      <app-recipes *ngIf="selectedMenu === 'recipes'"></app-recipes>
+      <app-shopping-list *ngIf="selectedMenu === 'shopping-list'"></app-shopping-list>
     </div>
   </div>
 </div>
